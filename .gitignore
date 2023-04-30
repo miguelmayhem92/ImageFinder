@@ -1,0 +1,9 @@
+__pycache__/
+images/
+dataset/
+mlruns/
+extract_data/
+embeding_db.pt
+transformer_test.ipynb
+.vscode
+.ipynb_checkpoints
