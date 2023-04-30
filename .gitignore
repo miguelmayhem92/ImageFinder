@@ -3,6 +3,7 @@ images/
 dataset/
 mlruns/
 extract_data/
+embeding_db/
 embeding_db.pt
 transformer_test.ipynb
 .vscode
