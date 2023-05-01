@@ -106,7 +106,7 @@ some demo pictures:
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img2.jpg)
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img3.jpg)
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img4.jpg)
-(for some reason the json is displayed in a no sorted fashion on fastapi)
+(for some reason the json is displayed in a no sorted fashion on fastapi but top 5 is there)
 
 ### References
 * usecase in HuggingFace: https://huggingface.co/blog/image-similarity
