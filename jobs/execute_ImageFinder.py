@@ -8,7 +8,7 @@ from jobs.configs import configs
 
 run_id = configs.run_id
 proj_name = configs.proj_name
-embedding_path = configs.embedding_object
+embedding_path = configs.embedding_db_path
 tmp_path = configs.image_path
 
 ## loading ml objects
@@ -27,7 +27,7 @@ def prediction():
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    embeding_db = torch.load(embedding_path)
+    embeding_db = torch.load(embedding_path + 'embedding_db.pt')
 
     transformation_chain = T.Compose(
         [

@@ -1,10 +1,10 @@
 __pycache__/
 images/
-dataset/
+train/
+test/
 mlruns/
-extract_data/
-embeding_db/
-embeding_db.pt
+embedding_db.pt
 transformer_test.ipynb
 .vscode
 .ipynb_checkpoints
+data-interview*.csv
