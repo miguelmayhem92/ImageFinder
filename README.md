@@ -108,6 +108,16 @@ some demo pictures:
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img4.jpg)
 (for some reason the json is displayed in a no sorted fashion on fastapi but top 5 is there)
 
+## Conclusions
+
+completeme
+
+## Some improvements for later
+
+* in case larger amount of images need to be screened (5K, 10K, 100K or even 1M) a hashmap method can be applied
+* the model that was used was a very generic one (though it provided fair results). To improve precision, model finetuning using a labelized dataset with a more specific purposed will be required
+* maybe implementation of a database image oriented to display the images and that can serve as scalable image database
+
 ### References
 * usecase in HuggingFace: https://huggingface.co/blog/image-similarity
 * pretrained model: https://huggingface.co/google/vit-base-patch16-224-in21k
