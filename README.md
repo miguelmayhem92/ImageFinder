@@ -107,7 +107,6 @@ the process to get the similar image is the following:
 the code structure is:
 
            .
-           ├── ...
            ├── main.py                                      # location of the api executable
            ├── research_env/                                # folder that contains the notebooks where the solution was explored and tested
            ├── extract_data/                                # folder containing the csv files data-interview
@@ -115,13 +114,13 @@ the code structure is:
            ├── dataset/
            |   ├── train/                                   # folder containing train images
            |   ├── test/                                    # folder containing test images
-           ├── mlruns/                                      # trials and metadata of the model
+           ├── mlruns/                                      # trials and metadata of the model created by mlflow
            ├── embeddign_db/                                #folder where the embedding_db is stored
            ├── jobs/
            |   ├── execute_ImageFinder.py                   # some functions and code that executes the image matching worflow
            |   ├── configs.py                               # configs for the api and the prod code
            └── README.md
-           └── ...
+           
 
 some demo pictures:
 
