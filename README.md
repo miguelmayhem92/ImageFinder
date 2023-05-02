@@ -3,7 +3,7 @@
 Hello!
 here I share a detailed description of the ImageFinder.
 
-goal: create an API that given an image, posts the top x,(5 in my case) most similar images
+goal: create an API that given an image, posts the top x,(3 in my case) most similar images
 
 ## Summary
 The current use case enters in the domain of image processing, more specifically in the image matching field.
@@ -102,7 +102,7 @@ the process to get the similar image is the following:
   * call the embeddings from the train data (that is stored in embedding_db/)
   * compute cosine similarity between the input image and the embeddings db
   * sort and rank results
-  * display the top 5 most similar images in json (where the key is the Id of the image and the value is the cosine similarity score)
+  * display the top 3 most similar images in json (where the key is the Id of the image and the value is the cosine similarity score)
   
 the code structure is:
 
@@ -112,6 +112,7 @@ the code structure is:
   |-embeddign_db/ #folder where the embedding_db is stored
   |-jobs/
      |-execute_ImageFinder.py # some functions and code that executes the image matching worflow
+     |-configs.py  # configs for the api and the prod code
   
  
 some demo pictures:

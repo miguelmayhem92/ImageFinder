@@ -2,9 +2,11 @@ __pycache__/
 images/
 train/
 test/
-mlruns/
+tags/
+artifacts/
 embedding_db.pt
 transformer_test.ipynb
 .vscode
+.trash
 .ipynb_checkpoints
 data-interview*.cs

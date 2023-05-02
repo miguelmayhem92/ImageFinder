@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Miguel/ImageFinder/mlruns/0/26dcbb9e4fc74035aafe13c4dbab1704/artifacts
+end_time: 1683037286692
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 26dcbb9e4fc74035aafe13c4dbab1704
+run_name: gentle-snail-108
+run_uuid: 26dcbb9e4fc74035aafe13c4dbab1704
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1683037270215
+status: 3
+tags: []
+user_id: Miguel
