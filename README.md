@@ -106,23 +106,31 @@ the process to get the similar image is the following:
   
 the code structure is:
 
-  .
-  ├── ...
-  ├── main.py                                      # location of the api executable
-  ├── research_env/                                # folder that contains the notebooks where the solution was explored and tested
-  ├── extract_data/                                # folder containing the csv files data-interview
-  ├── images/                                      # folder containing the raw images output of the image-downloader.py
-  ├── dataset/
-  |   ├── train/                                   # folder containing train images
-  |   ├── test/                                    # folder containing test images
-  ├── mlruns/                                      # trials and metadata of the model
-  ├── embeddign_db/                                #folder where the embedding_db is stored
-  ├── jobs/
-  |   ├── execute_ImageFinder.py                   # some functions and code that executes the image matching worflow
-  |   ├── configs.py                               # configs for the api and the prod code
-  └── README.md
-  └── ...
-
+           .
+           ├── ...
+           ├── main.py                                      # location of the api executable
+           ├── research_env/                                # folder that contains the notebooks where the solution was explored and tested
+           ├── extract_data/                                # folder containing the csv files data-interview
+           ├── images/                                      # folder containing the raw images output of the image-downloader.py
+           ├── dataset/
+           |   ├── train/                                   # folder containing train images
+           |   ├── test/                                    # folder containing test images
+           ├── mlruns/                                      # trials and metadata of the model
+           ├── embeddign_db/                                #folder where the embedding_db is stored
+           ├── jobs/
+           |   ├── execute_ImageFinder.py                   # some functions and code that executes the image matching worflow
+           |   ├── configs.py                               # configs for the api and the prod code
+           └── README.md
+           └── ...
+    .
+    ├── ...
+    ├── docs                    # Documentation files (alternatively `doc`)
+    │   ├── TOC.md              # Table of contents
+    │   ├── faq.md              # Frequently asked questions
+    │   ├── misc.md             # Miscellaneous information
+    │   ├── usage.md            # Getting started guide
+    │   └── ...                 # etc.
+    └── ...
  
 some demo pictures:
 
