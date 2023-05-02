@@ -10,6 +10,7 @@ run_id = configs.run_id
 proj_name = configs.proj_name
 embedding_path = configs.embedding_db_path
 tmp_path = configs.image_path
+show_top = configs.show_top
 
 ## loading ml objects
 def prediction():
@@ -58,7 +59,7 @@ def prediction():
         return scores.numpy().tolist()
 
 
-    def fetch_similar(model, all_candidate_embeddings, image, top_k=5):
+    def fetch_similar(model, all_candidate_embeddings, image, top_k=show_top):
         """Fetches the `top_k` similar images with `image` as the query."""
         # Prepare the input query image for embedding computation.
         image_transformed = transformation_chain(image).unsqueeze(0)

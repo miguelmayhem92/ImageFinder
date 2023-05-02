@@ -55,19 +55,23 @@ extractor_dict = {
     "image_std":extractor.image_std,
 }
 
-registered_model_name = f'{proj_name}_models' 
-
 ### logging the extractor as json in mlflow
-mlflow.log_dict(extractor_dict, "extractor_dict.json")
+registered_model_name = f'{proj_name}_models' 
+with mlflow.start_run():
 
-### logging the model in mlflow for faster execution
-mlflow.pytorch.log_model(
-    model, 
-    artifact_path=f"{proj_name}-run",
-    registered_model_name = registered_model_name,
-)
+    mlflow.log_dict(extractor_dict, "extractor_dict.json")
+
+    ### logging the model in mlflow for faster execution
+    mlflow.pytorch.log_model(
+        model, 
+        artifact_path=f"{proj_name}-run",
+        registered_model_name = registered_model_name,
+    )
 
 ##saving embeddings and ids in a torch pt object
+if not os.path.exists(embedding_db_path):
+        os.makedirs(embedding_db_path)
+
 emb_true_id = torch.from_numpy(np.array(candidate_subset_emb['id']))
 embeding_db = torch.cat((all_candidate_embeddings, emb_true_id.unsqueeze(1)), 1)
 torch.save(embeding_db, f'{embedding_db_path}embedding_db.pt')

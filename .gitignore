@@ -7,4 +7,4 @@ embedding_db.pt
 transformer_test.ipynb
 .vscode
 .ipynb_checkpoints
-data-interview*.csv
+data-interview*.cs
