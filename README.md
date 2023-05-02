@@ -76,10 +76,10 @@ the production code replicates the data pipeline done in the research environmen
 
 steps to execute are:
 
- * image-downloader.py (provided code) it dowloads the raw images in file images/
- * clean_csv.py it cleans the data-interview.csv (drop duplicates and some treatement) and creates data-interview-clean.csv in athe file extract_data/
- * create_dataset.py it splits the image data in images/ into train and test data in a file dataset/ (200 images trainning data). In addition, it creates a metadata file important to retrieve Ids in the image dataset
- * train.py
+ 1. image-downloader.py (provided code) it dowloads the raw images in file images/
+ 2. clean_csv.py it cleans the data-interview.csv (drop duplicates and some treatement) and creates data-interview-clean.csv in athe file extract_data/
+ 3. create_dataset.py it splits the image data in images/ into train and test data in a file dataset/ (200 images trainning data). In addition, it creates a metadata file important to retrieve Ids in the image dataset
+ 4. train.py
      * produces the dataset object using the train/ data
      * download the model from google/vit-base-patch16-224-in21k
      * takes a sample 190 images from the train dataset
@@ -115,10 +115,14 @@ the code structure is:
            |   ├── train/                                   # folder containing train images
            |   ├── test/                                    # folder containing test images
            ├── mlruns/                                      # trials and metadata of the model created by mlflow
-           ├── embeddign_db/                                #folder where the embedding_db is stored
+           ├── embeddign_db/                                # folder where the embedding_db is stored
            ├── jobs/
            |   ├── execute_ImageFinder.py                   # some functions and code that executes the image matching worflow
            |   ├── configs.py                               # configs for the api and the prod code
+           |   ├── image-downloader.py                      # code 
+           |   ├── clean_csv.py 
+           |   ├── create_dataset.py  
+           |   ├── train.py                               
            └── README.md
            
 
