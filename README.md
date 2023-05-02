@@ -122,16 +122,7 @@ the code structure is:
            |   ├── configs.py                               # configs for the api and the prod code
            └── README.md
            └── ...
-    .
-    ├── ...
-    ├── docs                    # Documentation files (alternatively `doc`)
-    │   ├── TOC.md              # Table of contents
-    │   ├── faq.md              # Frequently asked questions
-    │   ├── misc.md             # Miscellaneous information
-    │   ├── usage.md            # Getting started guide
-    │   └── ...                 # etc.
-    └── ...
- 
+
 some demo pictures:
 
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img1.jpg)
