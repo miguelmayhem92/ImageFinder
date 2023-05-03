@@ -122,12 +122,9 @@ the code structure is:
            └── README.md
            
 
-some demo pictures:
+a demo gif:
 
-![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img1.jpg)
-![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img2.jpg)
-![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img3.jpg)
-![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img4.jpg)
+![](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/demo.gif)
 
 ## Conclusions
 
