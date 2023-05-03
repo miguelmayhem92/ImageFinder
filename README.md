@@ -6,13 +6,10 @@ here I share a detailed description of the ImageFinder.
 goal: create an API that given an image, posts the top x,(3 in my case) most similar images
 
 ## Summary
-The current use case enters in the domain of image processing, more specifically in the image matching field.
-The use case was addressed using transfer learning and embeddings. First of all, the image dataset was explored to measure the problem complexity.
-The obstacles: Given an image, look up into a db for a similar images; no labels, which similarity measure?, DB size and image size.
 
-Some research was done to find a solution and a solution was found using pre-trained models (with encoders) and embeddigns. In the research enviroment the solution was tested getting good results. Some simulations using the expected pipeline were done in order to ensure that the solution can be implemented in production.
+The following API takes an image as an input and then gives the three images that resembles it the most in a given database. The obstacles: without labels, a variable database size and different image sizes, which similarity measure to use? The current use case enters in the domain of image processing, more specifically in the image matching field, and it was addressed using transfer learning and embeddings.
 
-Finally the model/solution was deployed using MLflow and FastApi
+To begin with, the image dataset was explored to measure the problem complexity. Later on, some research was done to find potential solutions, resulting in the finding of pre-trained models (with encoders) and embeddigns that were adapted to handle the use case. Then, the solution was tested in a research environment until getting good results. Moreover, some simulations using the expected pipeline were done in order to ensure that the solution can be implemented in production. Finally, the model/solution was deployed in production by using MLflow and FastApi.
 
 ## Requirements
 * opencv
@@ -44,7 +41,6 @@ the first obstacles that were encountered:
   * very diverse images -> even if try to label images, result would require too many labels, data and time, not an option
   * preserve the ids -> get a method that can screen the images and ,at the same time, preserve the order so that I can get the Ids of the best similar image
 
-A very good solution was found in HuggingFace that addressed most of the obstacles encountered before.
 The solution uses an encoder model in order to infer the image embeddings. So in some words, an underlaying pre-trained model is used to get a numerical representation of the image candidates (DB) and an input image (Y). 
 
 The embedings in short is a numerical matrix representation of the vocabulary (or image classes DB) at the last layer of the encoder block and it is calculated during the supervised training task of the model (for this use case we do not need the predictions of the model but the encoder output).
@@ -92,7 +88,7 @@ after running the previous steps, the api has everything to run a model and to g
 
 <b> 3. API
 
-to build the API, I used FastAPI, a restful python framework very straightfordward and simple to use, to develope the POST endpoint
+to build the API, I used FastAPI, a restful python framework, to develope the POST endpoint
 the process to get the similar image is the following:
 
   * upload an image stored in local
@@ -133,8 +129,6 @@ some demo pictures:
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img3.jpg)
 ![alt text](https://github.com/miguelmayhem92/ImageFinder/blob/main/diagrams/img4.jpg)
 
-(for some reason the json is displayed in a no sorted fashion on fastapi but top 3 is there)
-
 ## Conclusions
 
 The ImageFinder use case enters in the domain of image matching. A solution was found using a pretrained model that helps to convert an image dataset into a numerical matrix (embedding) and the same for an input image. Then cosine similarity can be computed and the embeddings image dataset can be ranked and a top x can be displayed. 
@@ -143,9 +137,9 @@ Some prerequisites needed are the model, the extractor and the embeddigns of the
 ## Some improvements for later
 
 * in case of larger number of images to be screened (5K, 10K, 100K or even 1M) a hashmap method can be applied
-* the model that was used was a very generic one (though it provided fair results). To improve precision, model finetuning using a labelized dataset with a more specific purposed will be required
+* To improve precision, model finetuning using a labelized dataset with a more specific purposed will be required
 * maybe implementation of a database image oriented to display the images and that can serve as scalable image database
 
 ### References
-* usecase in HuggingFace: https://huggingface.co/blog/image-similarity
+
 * pretrained model: https://huggingface.co/google/vit-base-patch16-224-in21k
