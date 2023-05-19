@@ -1,17 +1,26 @@
 from fastapi import FastAPI, UploadFile, File
-from jobs.execute_ImageFinder import prediction
-import schemas
+from app.jobs import prediction
+import app.schemas
 
 import os
 import shutil
 
 tmp_image_dir = 'tmp_image/'
+project_name = 'ImageFinder'
+app_version = "0.0.1"
+model_version = "1"
 
 app = FastAPI()
 
 @app.get("/health")
 def health():
-    health = schemas.Health()
+    """
+    Root Get
+    """
+    health = schemas.Health(
+        name=project_name, api_version=app_version, model_version=model_version
+    )
+
     return health.dict()
 
 @app.post("/image_finder")

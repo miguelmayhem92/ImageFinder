@@ -4,13 +4,19 @@ import torchvision.transforms as T
 import torch 
 import mlflow
 from tqdm.auto import tqdm
-from jobs.configs import configs
+from app.jobs.configs import configs
+import os
+
+my_local_path = os.getcwd()
 
 run_id = configs.run_id
 proj_name = configs.proj_name
 embedding_path = configs.embedding_db_path
 tmp_path = configs.image_path
 show_top = configs.show_top
+
+
+mlflow.set_tracking_uri(f"file:{my_local_path}\mlruns")
 
 ## loading ml objects
 def prediction():

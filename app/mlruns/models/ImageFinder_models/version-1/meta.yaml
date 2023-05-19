@@ -1,0 +1,12 @@
+creation_timestamp: 1684308713181
+current_stage: None
+description: null
+last_updated_timestamp: 1684308713181
+name: ImageFinder_models
+run_id: fcf2d0d7273247e8a95e9db9ef58e133
+run_link: null
+source: file:C:\Users\Miguel\ImageFinder/app/mlruns/0/fcf2d0d7273247e8a95e9db9ef58e133/artifacts/ImageFinder-run
+status: READY
+status_message: null
+user_id: null
+version: 1

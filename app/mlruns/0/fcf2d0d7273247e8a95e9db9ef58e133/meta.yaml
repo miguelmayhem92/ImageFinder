@@ -1,0 +1,15 @@
+artifact_uri: file:C:\Users\Miguel\ImageFinder/app/mlruns/0/fcf2d0d7273247e8a95e9db9ef58e133/artifacts
+end_time: 1684308713248
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fcf2d0d7273247e8a95e9db9ef58e133
+run_name: overjoyed-auk-133
+run_uuid: fcf2d0d7273247e8a95e9db9ef58e133
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684308698672
+status: 3
+tags: []
+user_id: Miguel

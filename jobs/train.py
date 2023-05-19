@@ -25,6 +25,7 @@ model = AutoModel.from_pretrained(model_ckpt)
 
 image_path = my_local_path + '/dataset'
 dataset = load_dataset("imagefolder", data_dir=image_path, drop_labels=True)
+mlflow.set_tracking_uri(f"file:{my_local_path}/app/mlruns")
 
 # Data transformation chain.
 transformation_chain = T.Compose(
