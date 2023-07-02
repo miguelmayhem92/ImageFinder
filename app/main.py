@@ -1,6 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
-from app.jobs import prediction
-import app.schemas
+from jobs import prediction
+import schemas as schemas
 
 import os
 import shutil
