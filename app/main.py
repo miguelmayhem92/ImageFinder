@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
-from jobs import prediction
-import schemas as schemas
+
+from utils import prediction
+from schemas import Health
 
 import os
 import shutil
@@ -17,7 +18,7 @@ def health():
     """
     Root Get
     """
-    health = schemas.Health(
+    health = Health(
         name=project_name, api_version=app_version, model_version=model_version
     )
 
