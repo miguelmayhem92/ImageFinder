@@ -12,6 +12,6 @@ class configs():
     ## ML configs
     show_top = 3
     model_ckpt = 'google/vit-base-patch16-224-in21k'
-    run_id = 'fcf2d0d7273247e8a95e9db9ef58e133'
+    run_id = 'de181724bd1b4a73a30f0c0a00315b97'
     image_path = '/tmp_image/'
     embedding_db_path = '/embedding_db/'

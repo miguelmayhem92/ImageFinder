@@ -19,13 +19,14 @@ model_ckpt = configs.model_ckpt
 seed = configs.seed
 num_samples = configs.num_samples
 proj_name = configs.proj_name
+mlflow_server_path = configs.mlflow_server_path
 embedding_db_path = configs.embedding_db_path
 extractor = AutoFeatureExtractor.from_pretrained(model_ckpt)
 model = AutoModel.from_pretrained(model_ckpt)
 
 image_path = my_local_path + '/dataset'
 dataset = load_dataset("imagefolder", data_dir=image_path, drop_labels=True)
-mlflow.set_tracking_uri(f"file:{my_local_path}/app/mlruns")
+mlflow.set_tracking_uri(f"file:{mlflow_server_path}")
 
 # Data transformation chain.
 transformation_chain = T.Compose(

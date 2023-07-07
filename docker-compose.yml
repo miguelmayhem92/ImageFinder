@@ -1,0 +1,12 @@
+version: "1.0"
+services:
+  imagefinder:
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile.app
+    ports:
+      - 80:80
+      - 5000:5000
+    volumes:
+      - ./app:/app
+

@@ -18,10 +18,10 @@ show_top = configs.show_top
 
 ## loading ml objects
 def prediction():
-    mlflow_path = f'{my_local_path}/mlruns/'
+    mlflow_path = f'{my_local_path}/mlruns'
     
-    mlflow.set_tracking_uri(f"file:{mlflow_path}")
-    
+    # mlflow.set_tracking_uri(f"file:{mlflow_path}")
+    #
     extractor_dict = mlflow.artifacts.load_dict(
         'runs:/'+run_id+'/extractor_dict.json'
     )

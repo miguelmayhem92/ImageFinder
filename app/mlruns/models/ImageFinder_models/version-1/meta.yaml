@@ -1,11 +1,11 @@
-creation_timestamp: 1684308713181
+creation_timestamp: 1688716816482
 current_stage: None
 description: null
-last_updated_timestamp: 1684308713181
+last_updated_timestamp: 1688716816482
 name: ImageFinder_models
-run_id: fcf2d0d7273247e8a95e9db9ef58e133
+run_id: de181724bd1b4a73a30f0c0a00315b97
 run_link: null
-source: file:C:\Users\Miguel\ImageFinder/app/mlruns/0/fcf2d0d7273247e8a95e9db9ef58e133/artifacts/ImageFinder-run
+source: file:///app/mlruns/0/de181724bd1b4a73a30f0c0a00315b97/artifacts/ImageFinder-run
 status: READY
 status_message: null
 user_id: null

@@ -1,0 +1,8 @@
+to open mlflow in the app container use:
+exec the container in interactive model
+then in the container app execute mlflow server --host 0.0.0.0 --port 5000
+
+new models using job/train.py from local
+1) change the meta.yml of the default folder and model folder
+2) once the model is logged, change the uri in the meta.yml of the artifacts of the model to the path of the container -- file:///app/mlruns...
+3) and do not forget to change the run id in the app config file

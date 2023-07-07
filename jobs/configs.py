@@ -15,3 +15,4 @@ class configs():
     run_id = '26dcbb9e4fc74035aafe13c4dbab1704'
     image_path = 'tmp_image/'
     embedding_db_path = 'embedding_db/'
+    mlflow_server_path = './app/mlruns'
